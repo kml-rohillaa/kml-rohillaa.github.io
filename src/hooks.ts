@@ -71,12 +71,16 @@ export function useScrollSpy(ids: string[]) {
     const onScroll = () => {
       const h = document.documentElement;
       const max = h.scrollHeight - h.clientHeight;
-      setProgress(max > 0 ? (h.scrollTop / max) * 100 : 0);
+      const scrollTop = h.scrollTop;
+      setProgress(max > 0 ? (scrollTop / max) * 100 : 0);
       let current = ids[0] ?? "";
       for (const id of ids) {
         const el = document.getElementById(id);
         if (el && el.getBoundingClientRect().top <= 120) current = id;
       }
+      // The last section may never reach the detection line, so when scrolled
+      // to the bottom, force it active.
+      if (max > 0 && scrollTop >= max - 2) current = ids[ids.length - 1] ?? current;
       setActive(current);
     };
     window.addEventListener("scroll", onScroll, { passive: true });
