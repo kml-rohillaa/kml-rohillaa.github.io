@@ -1,4 +1,4 @@
-import { profile, stats } from "../data";
+import { profile } from "../data";
 
 export default function Hero() {
   return (
@@ -29,14 +29,6 @@ export default function Hero() {
       <div className="avail">
         <span className="pulse" aria-hidden="true" /> {profile.location} · Available for new
         roles &amp; projects
-      </div>
-      <div className="hero-stats">
-        {stats.map((s) => (
-          <div className="hstat reveal" key={s.value}>
-            <b>{s.value}</b>
-            <span>{s.label}</span>
-          </div>
-        ))}
       </div>
     </section>
   );
