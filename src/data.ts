@@ -22,7 +22,9 @@ export const stats = [
 const ICON = (slug: string) =>
   `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${slug}.svg`;
 
-export const skills = [
+export type Skill = { name: string; icon?: string; invert?: boolean; node?: boolean };
+
+export const skills: Skill[] = [
   { name: "TypeScript", icon: ICON("typescript/typescript-original") },
   { name: "JavaScript", icon: ICON("javascript/javascript-original") },
   { name: "React", icon: ICON("react/react-original") },
@@ -38,6 +40,7 @@ export const skills = [
   { name: "Vite", icon: ICON("vitejs/vitejs-original") },
   { name: "Git", icon: ICON("git/git-original") },
   { name: "Figma", icon: ICON("figma/figma-original") },
+  { name: "Browser APIs", node: true },
 ];
 
 export const experience = [
