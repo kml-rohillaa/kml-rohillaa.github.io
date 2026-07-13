@@ -143,6 +143,22 @@ html[data-theme="dark"] .skill .ic img.inv { filter: invert(1) brightness(1.6); 
 .exp-card li b { color: var(--text); font-weight: 600; }
 @media (max-width: 620px) { .exp-card { grid-template-columns: 1fr; gap: 14px; } }
 
+/* PROJECTS */
+.proj-list { display: flex; flex-direction: column; gap: 16px; }
+.proj-card { padding: 24px 26px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); box-shadow: var(--ring); transition: border-color 0.25s var(--ease), transform 0.25s var(--ease); }
+.proj-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+.proj-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; }
+.proj-head h3 { font-family: "Sora", sans-serif; font-weight: 700; font-size: 18px; margin: 0; }
+.proj-links { margin-left: auto; display: flex; gap: 16px; }
+.proj-link { color: var(--accent); font-weight: 600; font-size: 13.5px; font-family: "IBM Plex Mono", ui-monospace, monospace; }
+.proj-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+.proj-desc { color: var(--muted); margin: 8px 0 0; font-size: 15.5px; }
+.proj-card ul { margin: 13px 0 0; padding-left: 18px; }
+.proj-card li { color: var(--muted); margin-bottom: 8px; font-size: 15.5px; }
+.proj-card li b { color: var(--text); font-weight: 600; }
+.proj-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.proj-tag { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 12px; color: var(--muted); background: var(--surface-2); border: 1px solid var(--line); border-radius: 100px; padding: 4px 11px; }
+
 /* CONTACT */
 .contact-box { text-align: center; padding: 16px 0; }
 .contact-box h2 { font-family: "Sora", sans-serif; font-weight: 800; font-size: clamp(30px, 5.4vw, 56px); letter-spacing: -0.03em; margin: 14px 0 16px; line-height: 1.05; }

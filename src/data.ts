@@ -82,9 +82,36 @@ export const experience = [
   },
 ];
 
+export type Project = {
+  name: string;
+  tagline: string;
+  tags: string[];
+  highlights: string[];
+  live?: string;
+  code?: string;
+};
+
+export const projects: Project[] = [
+  {
+    name: "Flux — Local-First Kanban Board",
+    tagline:
+      "A Linear/Jira-style board that runs entirely in the browser — no backend, real-time across tabs.",
+    tags: ["React 18", "TypeScript", "Zustand", "@dnd-kit", "IndexedDB", "Vite"],
+    highlights: [
+      "<b>Drag-and-drop</b> board (cards across columns + column reordering) with keyboard support, built on @dnd-kit with a custom collision detector.",
+      "<b>Local-first</b> with optimistic updates and full <b>offline mode</b> — IndexedDB persistence and an offline op-queue that flushes on reconnect.",
+      "<b>Real-time collaboration</b> across browser tabs via BroadcastChannel — live presence, shared activity history, and notifications.",
+      "Command palette, keyboard shortcuts, filters/search, labels, and per-user light/dark theming; shipped to Vercel + GitHub Pages via CI.",
+    ],
+    live: "https://kamal-rohilla-kanban-board.vercel.app",
+    code: "https://github.com/Kamal77-coder/kanban-board",
+  },
+];
+
 export const navItems = [
   { id: "about", label: "About" },
   { id: "skills", label: "Skills" },
   { id: "experience", label: "Experience" },
+  { id: "projects", label: "Projects" },
   { id: "contact", label: "Contact" },
 ];
