@@ -6,7 +6,15 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import { navItems, profile } from "./data";
-import { useTheme, useReveal, usePointerGlow, useScrollSpy } from "./hooks";
+import {
+  useTheme,
+  useReveal,
+  usePointerGlow,
+  useScrollSpy,
+  useMagnetic,
+  useSpotlight,
+  useTilt,
+} from "./hooks";
 
 const NAV_IDS = navItems.map((n) => n.id);
 
@@ -15,6 +23,9 @@ export default function App() {
   const { progress, active } = useScrollSpy(NAV_IDS);
   useReveal();
   usePointerGlow();
+  useMagnetic();
+  useSpotlight();
+  useTilt();
 
   return (
     <>

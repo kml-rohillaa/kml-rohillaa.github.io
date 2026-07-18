@@ -8,8 +8,13 @@ export default function Experience() {
         <h2 className="title">Where I've worked</h2>
       </div>
       <div className="exp-list">
-        {experience.map((e) => (
-          <div className="exp-card reveal" key={e.company}>
+        {experience.map((e, i) => (
+          <div
+            className="exp-card reveal"
+            key={e.company}
+            data-spotlight
+            style={{ ["--i" as string]: i }}
+          >
             <div className="exp-badge" aria-hidden="true">
               {e.badge}
             </div>

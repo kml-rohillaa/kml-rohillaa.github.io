@@ -16,6 +16,8 @@ export default function Skills() {
           <div
             className="skill reveal"
             key={s.name}
+            data-spotlight
+            data-tilt
             style={{ ["--i" as string]: i }}
           >
             <span className="ic">

@@ -19,10 +19,10 @@ export default function Hero() {
         accessibility, and the last 10% of polish.
       </p>
       <div className="cta-row">
-        <a className="btn primary" href="#contact">
+        <a className="btn primary" href="#contact" data-magnetic>
           Get in touch <span aria-hidden="true">→</span>
         </a>
-        <a className="btn" href={profile.cv} download>
+        <a className="btn" href={profile.cv} download data-magnetic>
           Download CV <span aria-hidden="true">↓</span>
         </a>
       </div>

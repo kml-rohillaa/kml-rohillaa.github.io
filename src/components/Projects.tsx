@@ -8,8 +8,13 @@ export default function Projects() {
         <h2 className="title">Things I've built</h2>
       </div>
       <div className="proj-list">
-        {projects.map((p) => (
-          <article className="proj-card reveal" key={p.name}>
+        {projects.map((p, i) => (
+          <article
+            className="proj-card reveal"
+            key={p.name}
+            data-spotlight
+            style={{ ["--i" as string]: i }}
+          >
             <div className="proj-head">
               <h3>{p.name}</h3>
               <div className="proj-links">
